@@ -41,6 +41,10 @@ class HouseTest < Minitest::Test
   end
 
   def test_area_of_entire_house
-    assert_equal 1900, @house.area
+    @house.area(@room_1)
+    @house.area(@room_2)
+    @house.area(@room_3)
+    @house.area(@room_4)
+    assert_equal 1900, @house.area_of_house
   end
   end
