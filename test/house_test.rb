@@ -24,9 +24,9 @@ class HouseTest < Minitest::Test
   end
 
   def test_if_house_add_rooms
-    @house.add_room(@room_1)
-    @house.add_room(@room_2)
-    assert_equal [@room_1, @room_2], house.rooms
-  end 
+    @house.add_rooms(@room_1)
+    @house.add_rooms(@room_2)
+    assert_equal [@room_1, @room_2], @house.room
+  end
 
 end
