@@ -37,6 +37,10 @@ class HouseTest < Minitest::Test
     @house.add_rooms(@room_3)
     @house.add_rooms(@room_4)
     assert_equal [@room_1, @room_2], @house.rooms_from_category(:bedroom)
-    assert_equal [@room_3, @room_4], @house.rooms_from_category(:basement)
+    assert_equal [@room_4], @house.rooms_from_category(:basement)
+  end
+
+  def test_area_of_entire_house
+    assert_equal 1900, @house.area
   end
   end
