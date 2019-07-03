@@ -12,7 +12,8 @@ class House
   end
 
   def rooms_from_category(category)
-    @rooms.find_all |room|
+    @rooms.find_all do |room|
     room.category == category
+  end 
   end
 end

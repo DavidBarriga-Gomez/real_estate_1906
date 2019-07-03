@@ -32,10 +32,10 @@ class HouseTest < Minitest::Test
   end
 
   def test_rooms_from_category
-    @room_1
-    @room_2
-    @room_3
-    @room_4
+    @house.add_rooms(@room_1)
+    @house.add_rooms(@room_2)
+    @house.add_rooms(@room_3)
+    @house.add_rooms(@room_4)
     assert_equal [@room_1, @room_2], @house.rooms_from_category(:bedroom)
     assert_equal [@room_3, @room_4], @house.rooms_from_category(:basement)
   end
